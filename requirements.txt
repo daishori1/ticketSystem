@@ -1,0 +1,28 @@
+# ============================================================
+# requirements.txt — Sistema de Tickets (FastAPI + NeonDB)
+# ============================================================
+# Instalar con:  pip install -r requirements.txt
+# ============================================================
+
+# --- Framework web ---
+fastapi==0.115.5          # Framework principal de la API
+uvicorn[standard]==0.32.0 # Servidor ASGI para correr FastAPI
+
+# --- Base de datos ---
+psycopg2-binary==2.9.10   # Driver PostgreSQL para Python (NeonDB)
+# Alternativa async (si usas async/await con FastAPI):
+# asyncpg==0.30.0
+
+# --- Variables de entorno ---
+python-dotenv==1.0.1      # Carga el .env con el connection string de Neon
+
+# --- Validación de datos (viene con FastAPI, pero se especifica por claridad) ---
+pydantic==2.10.3          # Modelos y validación de esquemas
+
+# --- Opcional: ORM (si decides migrar de SQL crudo a ORM) ---
+# sqlalchemy==2.0.36
+# alembic==1.14.0         # Migraciones de base de datos
+
+# --- Opcional: Seguridad y autenticación ---
+# python-jose[cryptography]==3.3.0   # JWT tokens
+# passlib[bcrypt]==1.7.4             # Hash de contraseñas
